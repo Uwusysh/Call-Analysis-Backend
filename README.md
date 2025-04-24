@@ -1,4 +1,4 @@
-# Call-Analysis-Backend-
+# Call-Analysis-Backend
 Call Transcription Analyzer with Groq LLM This project automates the analysis of phone call transcriptions using Groq’s LLaMA-3 model, combined with MongoDB for data storage and Sentence Transformers for future embedding capabilities. It's designed to fetch call data, extract insights via LLM, and store processed summaries back to a MongoDB.
 
 
@@ -58,3 +58,9 @@ python
 MONGO_URI= os.getenv("MONGO_URI")
 MONGO_DB = "CallAnalysis"
 MONGO_COLLECTION = "phone_records"
+
+## 📸 Example Output
+
+Here is an example of the output you can expect from the API:
+
+![Output Example](Call Analysis.png)
