@@ -28,7 +28,7 @@ Results are written back to the same MongoDB collection for enriched record-keep
 
 ## 📂 Folder Structure
 
-📁 your_project/ ├── data/ # Contains .txt transcription files (optional) ├── processed_llm_files.txt # Tracks processed files ├── main.py # Core logic ├── .env # Stores your API keys ├── requirements.txt # Python dependencies └── README.md
+📁 your_project/ ├── data/ Contains .txt transcription files (optional) ├── processed_llm_files.txt  Tracks processed files ├── main.py  Core logic ├── .env  Stores your API keys ├── requirements.txt  Python dependencies └── README.md
 
 ---
 
@@ -63,4 +63,4 @@ MONGO_COLLECTION = "phone_records"
 
 Here is an example of the output you can expect from the API:
 
-![Output Example](Call Analysis.png)
+![Output Example](Call_Analysis.png)
