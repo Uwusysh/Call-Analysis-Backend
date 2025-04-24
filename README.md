@@ -2,9 +2,6 @@
 Call Transcription Analyzer with Groq LLM This project automates the analysis of phone call transcriptions using Groq’s LLaMA-3 model, combined with MongoDB for data storage and Sentence Transformers for future embedding capabilities. It's designed to fetch call data, extract insights via LLM, and store processed summaries back to a MongoDB.
 
 
-markdown
-Copy
-Edit
 # 📞 LLM-Based Call Transcription Analyzer
 
 This project processes phone call transcriptions stored in MongoDB using a Large Language Model (Groq’s LLaMA-3 via Langchain) to extract insights such as:
@@ -33,19 +30,11 @@ Results are written back to the same MongoDB collection for enriched record-keep
 
 📁 your_project/ ├── data/ # Contains .txt transcription files (optional) ├── processed_llm_files.txt # Tracks processed files ├── main.py # Core logic ├── .env # Stores your API keys ├── requirements.txt # Python dependencies └── README.md
 
-yaml
-Copy
-Edit
-
 ---
 
 ## 🧪 Environment Variables (`.env`)
 
 GROQ_API_KEY=your_groq_api_key
-
-yaml
-Copy
-Edit
 
 ---
 
@@ -61,15 +50,11 @@ pip install -r requirements.txt
 Make sure your MongoDB collection has transcriptions ("transcription" field in each doc):
 
 bash
-Copy
-Edit
 python main.py
 🔐 MongoDB Notes
 Ensure MongoDB URI is updated inside main.py:
 
 python
-Copy
-Edit
-MONGO_URI = "mongodb+srv://user:password@cluster.mongodb.net/"
+MONGO_URI= os.getenv("MONGO_URI")
 MONGO_DB = "CallAnalysis"
 MONGO_COLLECTION = "phone_records"
