@@ -63,7 +63,7 @@ chrome_options.add_experimental_option("prefs", {
     "safebrowsing.enabled": True,
     "profile.default_content_setting_values.automatic_downloads": 1,
 })
-chrome_options.add_argument("--headless")
+# chrome_options.add_argument("--headless")
 chrome_options.add_argument("--disable-dev-shm-usage")
 chrome_options.add_argument("--no-sandbox")
 
@@ -275,13 +275,13 @@ def initialize_session(driver, wait):
         print("✅ Logged in successfully")
 
         # Navigate to Report tab
-        report_tab = wait.until(EC.element_to_be_clickable((By.LINK_TEXT, "Report")))
+        report_tab = wait.until(EC.element_to_be_clickable((By.XPATH, "/html/body/div[1]/nav/div/ul/li[5]/a")))
         report_tab.click()
         print("✅ Navigated to Report tab")
         time.sleep(3)
 
         # Apply filters
-        today_filter_button = wait.until(EC.element_to_be_clickable((By.CLASS_NAME, "todayFilter")))
+        today_filter_button = wait.until(EC.element_to_be_clickable((By.XPATH, "/html/body/div[6]/div[1]/div[2]/div[3]/button")))
         today_filter_button.click()
         print("✅ Applied 'Today' filter")
         
